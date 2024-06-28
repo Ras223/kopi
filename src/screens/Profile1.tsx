@@ -1,16 +1,15 @@
 import {Image, StyleSheet, Text, TextInput, View} from 'react-native';
 import React, {useState} from 'react';
+import {Header} from 'react-native/Libraries/NewAppScreen';
 import HeaderBar from '../components/HeaderBar';
 
-export default function Profile() {
+export default function Profile1() {
   const [name, setName] = useState('Rizky Aulia');
   const [phoneNumber, setPhoneNumber] = useState('08123456789');
 
   return (
     <View testID="profile" style={styles.container}>
-      <View style={styles.header}>
-        <HeaderBar />
-      </View>
+      <HeaderBar title="Profile" />
       <View style={styles.content}>
         <View style={styles.photoContainer}>
           <Image
@@ -56,16 +55,6 @@ const styles = StyleSheet.create({
     paddingTop: 50,
     backgroundColor: '#f8f8f8',
     paddingLeft: 20,
-  },
-  navbar: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    paddingHorizontal: 10,
-    paddingVertical: 10,
-  },
-  navbarTitle: {
-    fontSize: 20,
-    fontWeight: 'bold',
   },
   content: {
     flex: 1,
